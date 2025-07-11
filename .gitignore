@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+fusion_result.json
+logs/
+kernel_meta/
+outputs/
