@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python src/qwen.py \
+python src/run_qwen_eval.py \
     --dataset_name triviaqa --dataset_path /aistor/sjtu/hpc_stor01/home/luoyijie/data/wikipedia/triviaqa/val.jsonl \
     --template_name wiki_main_topics \
     --output_path outputs/qwen2.5-1.5b/triviaqa_wiki_main_topics.jsonl \

@@ -75,11 +75,11 @@ def _worker_main(
                     
                     # Logits are shifted by one position relative to input_ids for next-token prediction.
                     # The logits for the choice tokens start right after the prompt ends.
-                    start_index = prompt_tokens_count
+                    start_index = prompt_tokens_count - 1
                     end_index = start_index + len(choice_ids)
                     
                     # Get the specific logits corresponding to the positions of the choice tokens
-                    choice_logits = logits[choice_idx, start_index-1:end_index-1, :]
+                    choice_logits = logits[choice_idx, start_index:end_index, :]
                     
                     # Calculate the log probabilities from the logits
                     log_probs = F.log_softmax(choice_logits, dim=-1)
